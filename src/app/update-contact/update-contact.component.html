@@ -1,0 +1,47 @@
+<a class="btn btn-primary btn-lg" routerLink="/">
+  <i class="fa fa-arrow-left"></i> Back</a>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header">
+          <h2>
+            Update Contact
+          </h2>
+        </div>
+        <div class="card-body">
+          <form id="formNewcontact" name='formNewcontact' #contactData="ngForm" (ngSubmit)="updatecontact(contactData.value)">
+            <div class="form-group">
+              <label>contact ID:</label>
+              <input class="form-control" type="text" name="contact_name" id="contact_name" placeholder="contact_name" [(ngModel)]="data.contact_name" ngModel>
+            </div>
+
+            <br>
+
+            <div class="form-group">
+              <label>contact Name:</label>
+              <input class="form-control" type="text" name="contact_email" id="contact_email" placeholder="contact_email" [(ngModel)]="data.contact_email" ngModel>
+            </div>
+            <br>
+
+            <div class="form-group">
+              <label>contact Cost:</label>
+              <input class="form-control" type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" name="contact_phone" id="contact_phone" placeholder="contactCost" [(ngModel)]="data.contact_phone" ngModel>
+            </div>
+            <br>
+
+            <input class="btn btn-warning text-center" type="submit" value="Update contact">
+          </form>
+          <h3 class="text-warning" *ngIf="isUpdated">{{confirmationString}}</h3>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,42 @@
+<a class="btn btn-primary btn-lg" routerLink="/">
+  <i class="fa fa-arrow-left"></i> Back</a>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header">
+          <h2>
+            Add New Contact
+          </h2>
+        </div>
+        <div class="card-body">
+          <form id="formNewcontact" name='formNewcontact' #contactData="ngForm" (ngSubmit)="addNewcontact(contactData.value)">
+            <div class="form-group">
+              <label>Contact Name:</label>
+              <input class="form-control" type="text" name="contact_name" id="contact_name" placeholder="Enter Contact Name" ngModel>
+            </div>
+
+            <br>
+
+            <div class="form-group">
+              <label>Contact email:</label>
+              <input class="form-control" type="text" name="contact_email" id="contact_email" placeholder="Enter contact email" ngModel>
+            </div>
+            <br>
+
+            <div class="form-group">
+              <label>Contact Phone:</label>
+              <input class="form-control" type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');" name="contact_phone" id="contact_phone" placeholder="Enter Contact Phone" ngModel>
+            </div>
+            <br>
+
+            <input class="btn btn-success justify ml-5" type="submit" value="Add contact">
+          </form>
+          <h3 class="text-success" *ngIf="isAdded">{{confirmationString}}</h3>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4"></div>
+  </div>
+</div>

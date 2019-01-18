@@ -1,0 +1,46 @@
+<a class="btn btn-primary btn-lg" routerLink="/contact">
+  <i class="fa fa-plus"></i> Add New contact</a>
+
+<div class="p-1">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="card">
+          <div>
+            <h2 class="card-title">
+              <i class="fa fa-contact-hunt" aria-hidden="true"></i> Contacts</h2>
+          </div>
+          <div class="card-body">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Contact ID</th>
+                  <th>Contact Name</th>
+                  <th>Contact Phone</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let contact of contacts" class="text-center">
+                  <td>{{contact.id}}</td>
+                  <td>{{contact.contact_name}}</td>
+                  <td>{{contact.contact_email}}</td>
+                  <td>{{contact.contact_phone}}</td>
+                  <td>
+
+                    <a class="btn btn-danger btn-sm" (click)="deletecontact(contact.id)">Delete</a>
+
+                  </td>
+                  <td>
+                    <a class="btn btn-outline-warning btn-sm" [routerLink]="['/updatecontact', contact.id]">Update</a>
+
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

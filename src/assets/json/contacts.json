@@ -1,0 +1,22 @@
+{
+  "contacts": [
+    {
+      "id": 1,
+      "contact_name": "Edson",
+      "contact_email": "edson@br.com",
+      "contact_phone": "666123123"
+    },
+    {
+      "id": 2,
+      "contact_name": "Steve",
+      "contact_email": "steve@br.com",
+      "contact_phone": "666123123"
+    },
+    {
+      "id": 3,
+      "contact_name": "Ann",
+      "contact_email": "ann@br.com",
+      "contact_phone": "666123123"
+    }
+  ]
+}
