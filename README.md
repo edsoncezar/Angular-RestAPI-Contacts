@@ -1,4 +1,4 @@
-# AngularCRUD
+# Angular-RestAPI-Contacts
 
 Angular Example Rest API with CRUD for contacts running with Angular CLI and DOCKER
 
