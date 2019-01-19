@@ -67,6 +67,24 @@ Now if you go to http://localhost:6633/contacts, you'll get
   }
 ]
 
+Prerequisites
+
+Install Node.js® and npm
+
+node -v
+
+npm -v
+
+Install Angular cli
+
+npm install -g @angular/cli
+
+Install node packages
+
+cd /go/to/app/directory having package.json
+
+npm install
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
