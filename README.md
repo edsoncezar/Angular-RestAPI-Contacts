@@ -107,26 +107,26 @@ If you get a problem with Python
 
 That's the path in my case /usr/lib/python3.6
 
-apt-get update     
-apt-get install python3.6 - My version    
-ln -s /usr/lib/python3.6 /usr/lib/python 
+`apt-get update`     
+`apt-get install python3.6 - My version`    
+`ln -s /usr/lib/python3.6 /usr/lib/python` 
 
 In the ~/.bashrc
 
-export PYTHONPATH=$PYTHONPATH:/usr/lib
-export PATH=$PATH:/usr/lib
+`export PYTHONPATH=$PYTHONPATH:/usr/lib`
+`export PATH=$PATH:/usr/libv
 
 Use them together, for example to clean up all your docker images and containers:
 
-docker images -a
+`docker images -a`
 
-kill all running containers with docker kill $(docker ps -q)
+kill all running containers with `docker kill $(docker ps -q)`
 
-delete all stopped containers with docker rm $(docker ps -a -q)
+delete all stopped containers with `docker rm $(docker ps -a -q)`
 
-delete all images with docker rmi $(docker images -q)
+delete all images with docker `rmi $(docker images -q)`
 
-remove all volumes docker system prune --volumes
+remove all volumes `docker system prune --volumes`
 
 If this does not work try restarting docker service
 
