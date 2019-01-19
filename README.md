@@ -121,8 +121,11 @@ Use them together, for example to clean up all your docker images and containers
 docker images -a
 
 kill all running containers with docker kill $(docker ps -q)
+
 delete all stopped containers with docker rm $(docker ps -a -q)
+
 delete all images with docker rmi $(docker images -q)
+
 remove all volumes docker system prune --volumes
 
 If this does not work try restarting docker service
