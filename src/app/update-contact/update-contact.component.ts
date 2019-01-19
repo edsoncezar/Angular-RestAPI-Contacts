@@ -8,7 +8,7 @@ import 'rxjs/add/operator/toPromise';
   templateUrl: './update-contact.component.html',
   styleUrls: ['./update-contact.component.css']
 })
-export class UpdatecontactComponent implements OnInit {
+export class UpdateContactComponent implements OnInit {
   id: number;
   data: object = {};
   contacts = [];

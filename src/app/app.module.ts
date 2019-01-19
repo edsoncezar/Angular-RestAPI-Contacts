@@ -5,16 +5,16 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { HttpModule } from '@angular/http';
-import { contactComponent } from './contact/contact.component';
+import { ContactComponent } from './contact/contact.component';
 import { FormsModule } from '@angular/forms';
-import { UpdatecontactComponent } from './update-contact/update-contact.component';
+import { UpdateContactComponent } from './update-contact/update-contact.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    contactComponent,
-    UpdatecontactComponent
+    ContactComponent,
+    UpdateContactComponent
   ],
   imports: [
     BrowserModule,
@@ -22,8 +22,8 @@ import { UpdatecontactComponent } from './update-contact/update-contact.componen
     FormsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent },
-      { path: 'contact', component: contactComponent },
-      { path: 'updatecontact/:id', component: UpdatecontactComponent }
+      { path: 'contact', component: ContactComponent },
+      { path: 'updatecontact/:id', component: UpdateContactComponent }
     ])
   ],
   providers: [],

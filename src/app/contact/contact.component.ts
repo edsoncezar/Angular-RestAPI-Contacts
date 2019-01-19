@@ -5,9 +5,9 @@ import { Http, Response } from '@angular/http';
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.css']
 })
-export class contactComponent implements OnInit {
+export class ContactComponent implements OnInit {
   constructor(private http: Http) {}
-  confirmationString: string = 'New contact has been Added !!';
+  confirmationString: string = 'Added a new contact!!';
   isAdded: boolean = false;
   contactObj: object = [];
 
